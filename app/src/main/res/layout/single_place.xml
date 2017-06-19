@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#b9b9b9"
+    android:padding="10dp"
+    >
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_centerHorizontal="true"
+       />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/map"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:contentDescription="place icon"/>
+
+    <!--  Name Value -->
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:layout_below="@+id/imageView"/>
+
+    <!--  Address Value -->
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:layout_below="@+id/name"/>
+
+    <TextView
+        android:id="@+id/contact_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:autoLink="phone"
+        android:layout_below="@+id/address"
+        android:text="CONTACTS"
+        android:textColor="#0044ff"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/contact_layout"
+        android:layout_below="@+id/contact_label"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:autoLink="phone"
+            android:textColor="#000000"
+            />
+
+
+        <!-- Website Value -->
+        <TextView
+            android:id="@+id/website"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:autoLink="web"
+            android:layout_below="@+id/phone"
+            android:textColor="#000000"/>
+
+    </RelativeLayout>
+    <!-- Phone Number Label -->
+
+    <TextView
+        android:id="@+id/hours_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textColor="#0044ff"
+        android:text="HOURS"
+        android:layout_below="@+id/contact_layout"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hours_label"
+        android:background="#ffffff"
+        android:id="@+id/hours_layout">
+
+        <TextView
+            android:id="@+id/hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+
+    <!-- Ratings Value -->
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:layout_below="@+id/hours_layout"
+        android:textColor="#000000"/>
+
+
+</RelativeLayout>
+   </ScrollView>
